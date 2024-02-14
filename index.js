@@ -37,7 +37,7 @@ async function fetchUserWeatherInfo(coordinates){
     loadingScreen.classList.add("active");
     //API CALL
     try{
-        const response= await fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${lat},${lon}`);
+        const response= await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${lat},${lon}`);
 
         const data=await response.json();
         loadingScreen.classList.remove("active");
@@ -77,7 +77,7 @@ async function fetchSearchWeatherInfo(city){
     grantAccessContainer.classList.remove("active");
 
     try{
-        const response= await fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`);
+        const response= await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`);
         const data=await response.json();
         loadingScreen.classList.remove("active");
         userInfoContainer.classList.add("active");
